@@ -1,0 +1,20 @@
+This is a very simple Paypal client.  It only works with Paypal's Express Checkout
+and Adaptive Payments API's.  The benefit is the clean interface.
+
+It makes use of Pat Collins's client <https://github.com/patcoll/paypal-python> for
+the Express Checkout API (it provides a nice wrapper around it).  Thanks to him for
+that.
+
+To learn how to use it, check out the code.  It's well documented.
+
+EXAMPLE.
+
+  from paypal import payment
+
+  payment.send(5.00, 'recipient@example.com', 'sender@example.com',
+    return_url='http://localhost', cancel_url='http://localhost', options={
+      'app_id': ...})
+
+Type help(payment.send) for more explanation.
+
+AUTHOR.  Adeel Ahmad Khan <adeel@adeel.ru>
